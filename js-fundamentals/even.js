@@ -16,8 +16,20 @@
 //     i++
 //   }
 
-let input;
+// let input;
 
-do {
-    input = prompt("Insert Number");
-} while (Number(input) <= 100);
+// do {
+//     input = prompt("Insert Number");
+// } while (Number(input) <= 100);
+
+
+// let n = 40;
+
+// outer: for (let i = 2; i < n; i++) {
+//     for (let j = 2; j < i; j++) {
+//         if (i % j == 0 && i != 2){
+//             continue outer;
+//         }
+//     }
+//     console.log(i)
+// }
