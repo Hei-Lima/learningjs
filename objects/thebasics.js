@@ -49,6 +49,7 @@ function mult(obj) {
     for (let key in obj) {
         typeof(obj[key]) === "number" ? obj[key] = (obj[key] * 2) : null;
     }
+    
 
     console.log(obj)
 }
