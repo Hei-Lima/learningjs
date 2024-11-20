@@ -39,7 +39,7 @@
 
 // console.log(truncate("Hi everyone!", 20) == "Hi everyone!")
 
-//
+// Extract the money
 
 function extractCurrencyValue(str) {
     return +str.slice(1);
