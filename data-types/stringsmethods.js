@@ -167,15 +167,61 @@
 
 // Get average age
 
-function getAverageAge(arr) {
-    let sum = arr.reduce((total, person) => total += person.age, 0);
-    return sum / arr.length;
-}
+// function getAverageAge(arr) {
+//     let sum = arr.reduce((total, person) => total += person.age, 0);
+//     return sum / arr.length;
+// }
 
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 29 };
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
 
-let arr = [ john, pete, mary ];
+// let arr = [ john, pete, mary ];
 
-console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+// console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+// Filter unique array members
+
+// function unique(arr) {
+//     let newArr = [];
+//     for (let item of arr) {
+//         if (!newArr.includes(item)) {
+//             newArr.push(item);
+//         }
+//     }
+//     return newArr;
+//   }
+  
+//   let strings = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//   ];
+  
+//   console.log( unique(strings) ); // Hare, Krishna, :-O
+
+// Create keyed object from array
+
+function groupById(users) {
+    return users.reduce((newArr, item) => {
+        newArr[item.id] = item;
+        return newArr
+    }, {})
+  }
+
+let users = [
+    {id: 'john', name: "John Smith", age: 20},
+    {id: 'ann', name: "Ann Smith", age: 24},
+    {id: 'pete', name: "Pete Peterson", age: 31},
+  ];
+  
+  let usersById = groupById(users);
+  
+  /*
+  // after the call we should have:
+  
+  usersById = {
+    john: {id: 'john', name: "John Smith", age: 20},
+    ann: {id: 'ann', name: "Ann Smith", age: 24},
+    pete: {id: 'pete', name: "Pete Peterson", age: 31},
+  }
+  */
+ console.log(usersById)
