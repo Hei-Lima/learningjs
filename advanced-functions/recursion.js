@@ -36,4 +36,67 @@ function factorial(n) {
 
 // console.log(factorial(5))
 
+// Output a single-linked list
 
+function printLinkedList(current) {
+    if (current === null) {
+        return;
+    }
+    console.log(current.value)
+    printLinkedList(current.next)
+}
+
+function printLinkedListIterative(list) {
+    let current = list;
+    while (current !== null) {
+        console.log(current.value)
+        current = current.next;
+    }
+}
+
+let list = {
+    value: 1,
+    next: {
+      value: 2,
+      next: {
+        value: 3,
+        next: {
+          value: 4,
+          next: null
+        }
+      }
+    }
+  };
+
+
+
+// printLinkedList(list)
+// printLinkedListIterative(list)
+
+// Output a single-linked list in the reverse order
+
+function printReverseList(list) {
+    if (list.next !== null) {
+        printReverseList(list.next)
+    }
+    console.log(list.value)
+}
+
+function printReverseListIterative(list) {
+    let arr = [];
+    let current = list;
+
+    while (current !== null) {
+        arr.push(current.value)
+        current = current.next
+    }
+
+    arr = arr.reverse()
+    
+    for (let i of arr) {
+        console.log(i)
+    }
+}
+
+printReverseList(list)
+printReverseListIterative(list)
